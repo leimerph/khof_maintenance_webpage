@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,10 +7,9 @@
 	<meta name="keywords" content="Kärntnerhof, Carinthia, Hotel, Accommodation, Velden, Hotel">
 	<meta name="author" content="HotelKärntnerhof Team">
 	
-    <title>Coming Soon - Kärntnerhof</title>
-    <link rel="icon" href="favicon.svg" />
+    <title>Bald verfügbar - Kärntnerhof</title>
+    <!-- <link rel="icon" href="favicon.svg" /> -->
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -66,7 +65,7 @@
 </head>
 
 <body class="antialiased bg-gray-100 text-gray-900 flex flex-col min-h-screen justify-between">
-    <img src="./img/kaerntnerhof_winter.jpg" alt="Background image of Hotel Kärntnerhof in winter" class="background-image" />
+    <img src="./img/kaerntnerhof_winter.jpg" alt="Bild von Hotel Kärntnerhof im Winter" class="background-image" />
     <div class="background-overlay"></div>
 
     <nav id="main-nav" class="fixed top-0 w-full bg-white backdrop-blur-sm shadow-sm border-gray-200 overflow-hidden z-50">
@@ -74,17 +73,16 @@
             <div class="nav-active-bg hidden sm:block"></div>
 
             <div class="flex h-20 items-center justify-between">
-                <!-- Left group: logo + nav -->
+
                 <div class="flex items-center gap-8">
-                    <a href="" class="inline-flex items-center gap-3">
-                        <img src="./img/kärntnerhof_velden_logo.JPG" alt="Kärntnerhof" class="h-16 w-auto rounded-md object-cover shadow-sm" />
+                    <a href="/" class="inline-flex items-center gap-3">
+                        <img src="/img/kärntnerhof_velden_logo.JPG" alt="Kärntnerhof" class="h-16 w-auto rounded-md object-cover shadow-sm" />
                     </a>
                 </div>
 
-                <!-- Right group: language switcher -->
                 <div class="flex items-center gap-4">
-                    <a href="coming_soon.html" class="px-4 py-2 bg-[#69108e] text-white rounded-md shadow-md hover:bg-[#5a0d7a] transition">DE</a>
-                    <a href="coming_soon_en.html" class="px-4 py-2 bg-[#69108e] text-white rounded-md shadow-md hover:bg-[#5a0d7a] transition">EN</a>
+                    <a href="/" class="px-4 py-2 bg-[#69108e] text-white rounded-md shadow-md hover:bg-[#5a0d7a] transition">DE</a>
+                    <a href="/en/" class="px-4 py-2 bg-[#69108e] text-white rounded-md shadow-md hover:bg-[#5a0d7a] transition">EN</a>
                 </div>
             </div>
         </div>
@@ -92,9 +90,9 @@
 
     <main class="flex-grow flex items-center justify-center mt-20 z-50">
         <div class="bg-white rounded-lg shadow-lg p-8 text-center max-w-md w-full">
-            <h1 class="text-2xl font-bold mb-4" style="color: #69108e;">Coming Soon</h1>
+            <h1 class="text-2xl font-bold mb-4" style="color: #69108e;">Bald verfügbar</h1>
             <p class="text-gray-600 mb-6">
-                We are currently working on our new website to offer you an even better experience. Please be patient - we look forward to seeing you!
+                Wir arbeiten derzeit an unserer neuen Website, um Ihnen ein noch besseres Erlebnis zu bieten. Bitte haben Sie etwas Geduld - Wir freuen uns auf Sie!
             </p>
 
             <div class="flex items-center justify-center gap-2">
@@ -110,8 +108,8 @@
     <section class="py-12 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-2xl font-bold text-[#569b1e]">Contact Us!</h2>
-                <p class="text-gray-600">We are still available for you.</p>
+                <h2 class="text-2xl font-bold text-[#569b1e]">Kontaktieren Sie uns!</h2>
+                <p class="text-gray-600">Wir sind weiterhin für Sie erreichbar.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg hover:scale-105 transform transition duration-300">
@@ -130,17 +128,20 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-white border-t border-gray-200 shadow-sm z-50">
-    <div class="flex flex-col px-6 py-6 text-sm text-gray-500">
+    <div class="flex flex-col md:flex-row items-center md:justify-between px-6 py-6 text-sm text-gray-500 gap-4">
         
-        <!-- Left: Copyright -->
-        <div id="copyright_notice" class="text-center">
-        &copy; 2026 Khof Hotel GmbH - Hotel Kärntnerhof. All rights reserved.
+        <div id="copyright_notice" class="text-center md:text-left">
+        &copy; 2026 Khof Hotel GmbH Hotel Kärntnerhof. All rights reserved.
+        </div>
+        
+        <div class="flex space-x-6">
+        <a href="/legal_notice/" class="hover:text-[#69108e]">Impressum</a>
+        <a href="/privacy/" class="hover:text-[#69108e]">DSGVO</a>
         </div>
         
     </div>
-    </footer>
+    </footer>   
 
 </body>
 </html>
