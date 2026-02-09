@@ -1,31 +1,42 @@
 # Hotel Kärntnerhof – Maintenance Pages
 
-Dieses Repository enthält die statischen Wartungsseiten für die Website des  
-**Hotel Kärntnerhof, Velden am Wörthersee**.
+This repository contains the static maintenance pages for the  
+**Hotel Kärntnerhof, Velden am Wörthersee** website.
 
-Die Seiten dienen als temporäre Übergangslösung, während die neue Website entwickelt wird.
+These pages serve as a temporary solution while the new website is being developed.
 
-Alle Seiten sind statisch (HTML + Tailwind CSS via CDN) und enthalten keine Cookies, Formulare oder Tracking-Technologien.
+All pages are fully static (HTML + Tailwind CSS via CDN) and contain no cookies, forms, or tracking technologies.
 
 ## Deployment
 
-Die Seiten werden über **GitHub Pages** bereitgestellt.  
-Die Ordnerstruktur ist so aufgebaut, dass „schöne URLs“ ohne `.html` möglich sind:
+The pages are hosted using **GitHub Pages**.  
+The folder structure is designed to allow clean URLs without `.html`:
 
-Z.B.:
+Examples:
 - `/impressum` → `/impressum/index.html`
 - `/datenschutz` → `/datenschutz/index.html`
 
-## Nutzung
+## Usage
 
-Die Seiten können lokal geöffnet werden, indem die jeweiligen `index.html` Dateien direkt im Browser geöffnet werden.
+The pages can be opened locally by loading the respective `index.html` files directly in a browser.
 
-## Rechtliches
+## Legal Notice
 
-- Impressum und Datenschutzerklärung sind vollständig und gesetzeskonform eingebunden.
-- Diese Wartungsseiten verarbeiten keine personenbezogenen Daten.
+- The imprint (Impressum) and privacy policy (Datenschutzerklärung) are fully included and legally compliant.
+- These maintenance pages do not process any personal data.
 
-## Lizenz
+## License
 
-Interner Gebrauch für das Hotel Kärntnerhof.  
-Keine Weitergabe oder Wiederverwendung ohne Zustimmung.
+Internal use for Hotel Kärntnerhof only.  
+No redistribution or reuse without permission.
+
+## Contact
+
+Hotel Kärntnerhof  
+Villacher Straße 24  
+9220 Velden am Wörthersee, Austria  
+
+Email: office@kaerntnerhof-velden.com  
+Phone: +43 676 9701077  
+
+Website: https://kaerntnerhof-velden.com
