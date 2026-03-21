@@ -46,6 +46,19 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 0.9s ease-out both; }
+        .animate-fade-in-up   { animation: fadeInUp 0.9s ease-out both; }
+        .delay-200            { animation-delay: 0.2s; }
+    </style>
 
 </head>
 
@@ -58,13 +71,13 @@
 
                 <div class="flex items-center gap-8">
                     <a href="/" class="inline-flex items-center gap-3">
-                        <img src="/img/kärntnerhof_velden_logo.JPG" class="h-14 w-auto rounded-md shadow-sm" />
+                        <img src="/img/kärntnerhof_velden_logo.JPG" alt="Hotel Kärntnerhof Velden" class="h-14 w-auto rounded-md shadow-sm" />
                         &amp;
-                        <img src="/img/Schankbaron_logo.png" class="h-14 w-auto rounded-md shadow-sm" />
+                        <img src="/img/Schankbaron_logo.png" alt="Schankbaron" class="h-14 w-auto rounded-md shadow-sm" />
                     </a>
 
                     <div class="hidden sm:flex items-center space-x-4">
-                        <a href="/en/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Home</a>
+                        <a href="/en/" aria-current="page" class="px-3 py-2 text-base font-semibold text-[#69108e] underline underline-offset-4 decoration-2">Home</a>
                         <a href="/en/events/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Events</a>
                         <a href="/en/contact/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Contact</a>
                     </div>
@@ -72,7 +85,7 @@
 
                 <div class="flex items-center gap-6">
 
-                    <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron"
+                    <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&amp;hotel=schankbaron"
                     class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-white bg-[#569b1e] shadow-md hover:shadow-lg hover:bg-[#4c8a1a] transition-all duration-300">
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -86,7 +99,7 @@
                         <a href="/en/" class="px-3 py-1.5 text-sm font-medium rounded-full bg-[#69108e] text-white">EN</a>
                     </div>
 
-                    <button id="mobile-menu-button" class="sm:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100">
+                    <button id="mobile-menu-button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" class="sm:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100">
                         <svg id="icon-menu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -102,11 +115,11 @@
 
             <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-100 bg-white px-4 pt-4 pb-6 shadow-md space-y-4">
 
-                <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Home</a>
+                <a href="/en/" aria-current="page" class="block rounded-md px-3 py-2 text-base font-semibold text-[#69108e] underline underline-offset-4 decoration-2 bg-gray-100">Home</a>
                 <a href="/en/events/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Events</a>
                 <a href="/en/contact/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Contact</a>
 
-                <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron"
+                <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&amp;hotel=schankbaron"
                 class="block text-center px-4 py-2 rounded-full font-semibold text-white bg-[#569b1e] shadow hover:bg-[#4c8a1a]">
                     Book Now
                 </a>
@@ -141,7 +154,7 @@
             <p class="text-xl sm:text-2xl text-white mb-10 animate-fade-in-up delay-200">
                 Your relaxing vacation in Velden at the Wörthersee!
             </p>
-            <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron" data-page="rooms" class="nav-link inline-block px-8 py-3 bg-[#569b1e] text-white rounded-lg shadow-lg hover:bg-[#4c8a1a] transition transform hover:scale-105 animate-fade-in-up">
+            <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&amp;hotel=schankbaron" data-page="rooms" class="nav-link inline-block px-8 py-3 bg-[#569b1e] text-white rounded-lg shadow-lg hover:bg-[#4c8a1a] transition transform hover:scale-105 animate-fade-in-up">
                 Book Now
             </a>
             </div>
@@ -166,6 +179,7 @@
                                     <li class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-xl transition">
                                         <span class="font-semibold text-[#69108e]">Schankbaron Breakfast Buffet</span>
                                         <p class="text-sm text-gray-600 mt-1">Tasty and rich buffet with regional specialties</p>
+                                        <p class="text-sm text-[#569b1e] font-medium mt-2">7:30 – 10:00 &nbsp;·&nbsp; No hotel stay required – external guests are very welcome!</p>
                                     </li>
                                     <li class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-xl transition">
                                         <span class="font-semibold text-[#69108e]">Free WLAN</span>
@@ -251,7 +265,7 @@
                         </div>
                     </div>
 
-                    <div class="mt-6 grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                    <div class="mt-6 grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
                         <div class="bg-[#69108e] bg-opacity-5 p-4 rounded-lg border border-[#569b1e] border-opacity-20">
                             <span class="font-semibold text-[#69108e]">Activities in the area</span>
                             <p class="text-gray-700 text-sm mt-1">Cycling, hiking, water sports on Lake Wörth and many excursion destinations nearby</p>
@@ -261,8 +275,13 @@
                             <span class="font-semibold text-[#69108e]">Room Categories</span>
                             <p class="text-gray-700 text-sm mt-1">Double rooms, Comfort, Superior, Penthouse - many with balcony. (Only accessible via stairs)</p>
                         </div>
+
+                        <div class="bg-[#69108e] bg-opacity-5 p-4 rounded-lg border border-[#569b1e] border-opacity-20">
+                            <span class="font-semibold text-[#69108e]">Morning Opening Hours</span>
+                            <p class="text-gray-700 text-sm mt-1">7:30 – 12:00</p>
+                        </div>
                     </div>
-                
+
                 </div>
             </section>
 
@@ -299,7 +318,9 @@
                 menu.classList.toggle("hidden");
                 iconMenu.classList.toggle("hidden", !isHidden);
                 iconClose.classList.toggle("hidden", isHidden);
+                btn.setAttribute("aria-expanded", isHidden ? "true" : "false");
             });
+
         });
     </script>
 

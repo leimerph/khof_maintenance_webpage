@@ -26,6 +26,18 @@
     <title>Contact | Hotel Kärntnerhof Velden</title>
     <!-- <link rel="icon" href="favicon.svg" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes flyInLeft  { from { opacity:0; transform:translateX(-40px); } to { opacity:1; transform:translateX(0); } }
+        @keyframes flyInRight { from { opacity:0; transform:translateX(40px);  } to { opacity:1; transform:translateX(0); } }
+        @keyframes flyInUp    { from { opacity:0; transform:translateY(40px);  } to { opacity:1; transform:translateY(0); } }
+        .fly-in-left        { animation: flyInLeft  0.7s ease-out both; }
+        .fly-in-right       { animation: flyInRight 0.7s ease-out both; }
+        .fly-in-up          { animation: flyInUp    0.7s ease-out both; }
+        .hover-lift         { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover   { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,.12); }
+        .soft-appear        { animation: flyInUp 0.5s ease-out both; }
+        .background-white   { background-color: #fff; }
+    </style>
 
 </head>
 <body class="antialiased bg-gray-100 text-gray-900">
@@ -36,20 +48,20 @@
 
                 <div class="flex items-center gap-8">
                     <a href="/" class="inline-flex items-center gap-3">
-                        <img src="/img/kärntnerhof_velden_logo.JPG" class="h-14 w-auto rounded-md shadow-sm" />
+                        <img src="/img/kärntnerhof_velden_logo.JPG" alt="Hotel Kärntnerhof Velden" class="h-14 w-auto rounded-md shadow-sm" />
                         &amp;
-                        <img src="/img/Schankbaron_logo.png" class="h-14 w-auto rounded-md shadow-sm" />
+                        <img src="/img/Schankbaron_logo.png" alt="Schankbaron" class="h-14 w-auto rounded-md shadow-sm" />
                     </a>
 
                     <div class="hidden sm:flex items-center space-x-4">
                         <a href="/en/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Home</a>
                         <a href="/en/events/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Events</a>
-                        <a href="/en/contact/" class="px-3 py-2 text-base font-medium text-gray-900 hover:text-[#569b1e]">Contact</a>
+                        <a href="/en/contact/" aria-current="page" class="px-3 py-2 text-base font-semibold text-[#69108e] underline underline-offset-4 decoration-2">Contact</a>
                     </div>
                 </div>
 
                 <div class="flex items-center gap-6">
-                    <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron"
+                    <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&amp;hotel=schankbaron"
                        class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-white bg-[#569b1e] shadow-md hover:shadow-lg hover:bg-[#4c8a1a] transition-all duration-300">
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -79,9 +91,9 @@
             <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-100 bg-white px-4 pt-4 pb-6 shadow-md space-y-4">
                 <a href="/en/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Home</a>
                 <a href="/en/events/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Events</a>
-                <a href="/en/contact/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Contact</a>
+                <a href="/en/contact/" aria-current="page" class="block rounded-md px-3 py-2 text-base font-semibold text-[#69108e] underline underline-offset-4 decoration-2 bg-gray-100">Contact</a>
 
-                <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron"
+                <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&amp;hotel=schankbaron"
                    class="block text-center px-4 py-2 rounded-full font-semibold text-white bg-[#569b1e] shadow hover:bg-[#4c8a1a]">
                     Book Now
                 </a>
@@ -120,7 +132,7 @@
                         </div>
                     </div>
 
-                    <div class="shadow-md rounded-xl p-6 flex flex-col justify-between hover-lift border border-gray-200 bg-white-50">
+                    <div class="shadow-md rounded-xl p-6 flex flex-col justify-between hover-lift border border-gray-200 bg-white">
                         <div>
                             <h3 class="text-lg font-semibold mb-3" style="color: rgba(105,16,142,0.8);">Address</h3>
                             <address class="text-gray-700 leading-relaxed not-italic">
@@ -189,6 +201,7 @@
                 iconClose.classList.toggle("hidden", isHidden);
                 btn.setAttribute("aria-expanded", String(isHidden));
             });
+
         });
     </script>
 </body>

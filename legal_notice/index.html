@@ -21,9 +21,9 @@
 
                 <div class="flex items-center gap-8">
                     <a href="/" class="inline-flex items-center gap-3">
-                        <img src="/img/kärntnerhof_velden_logo.JPG" class="h-14 w-auto rounded-md shadow-sm" />
+                        <img src="/img/kärntnerhof_velden_logo.JPG" alt="Hotel Kärntnerhof Velden" class="h-14 w-auto rounded-md shadow-sm" />
                         &amp;
-                        <img src="/img/Schankbaron_logo.png" class="h-14 w-auto rounded-md shadow-sm" />
+                        <img src="/img/Schankbaron_logo.png" alt="Schankbaron" class="h-14 w-auto rounded-md shadow-sm" />
                     </a>
 
                     <div class="hidden sm:flex items-center space-x-4">
@@ -35,7 +35,7 @@
 
                 <div class="flex items-center gap-6">
 
-                    <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron"
+                    <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&amp;hotel=schankbaron"
                     class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-white bg-[#569b1e] shadow-md hover:shadow-lg hover:bg-[#4c8a1a] transition-all duration-300">
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,7 +49,7 @@
                         <a href="/en/" class="px-3 py-1.5 ml-1 text-sm font-medium rounded-full text-gray-700 hover:bg-white">EN</a>
                     </div>
 
-                    <button id="mobile-menu-button" class="sm:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100">
+                    <button id="mobile-menu-button" aria-label="Menü öffnen" aria-controls="mobile-menu" aria-expanded="false" class="sm:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100">
                         <svg id="icon-menu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -69,7 +69,7 @@
                 <a href="/de/events/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Events</a>
                 <a href="/de/contact/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Kontakt</a>
 
-                <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&hotel=schankbaron"
+                <a href="https://booking.s6.hotellogin.cloud/customer/schankbaron/booking.php?server=s6&amp;hotel=schankbaron"
                 class="block text-center px-4 py-2 rounded-full font-semibold text-white bg-[#569b1e] shadow hover:bg-[#4c8a1a]">
                     Jetzt Buchen
                 </a>
@@ -197,6 +197,24 @@
 
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.getElementById("mobile-menu-button");
+            const menu = document.getElementById("mobile-menu");
+            const iconMenu = document.getElementById("icon-menu");
+            const iconClose = document.getElementById("icon-close");
+
+            btn.addEventListener("click", () => {
+                const isHidden = menu.classList.contains("hidden");
+
+                menu.classList.toggle("hidden");
+                iconMenu.classList.toggle("hidden", !isHidden);
+                iconClose.classList.toggle("hidden", isHidden);
+                btn.setAttribute("aria-expanded", isHidden ? "true" : "false");
+            });
+        });
+    </script>
 
 </body>
 </html>
