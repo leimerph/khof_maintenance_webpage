@@ -15,13 +15,13 @@
     <meta property="og:description" content="Familiäres Hotel am Wörthersee in Velden mit Frühstück, gemütlichen Zimmern und direkter Nähe zu See und Zentrum." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://kaerntnerhof-velden.com/" />
-    <meta property="og:image" content="https://kaerntnerhof-velden.com/img/kaerntnerhof_winter.jpg" />
+    <meta property="og:image" content="https://kaerntnerhof-velden.com/img/kaerntnerhof_outside.jpg" />
     <meta property="og:locale" content="de_AT" />
     <meta property="og:locale:alternate" content="en_GB" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Hotel Kärntnerhof Velden | Hotel am Wörthersee in Kärnten" />
     <meta name="twitter:description" content="Familiäres Hotel am Wörthersee in Velden mit Frühstück und komfortablen Zimmern." />
-    <meta name="twitter:image" content="https://kaerntnerhof-velden.com/img/kaerntnerhof_winter.jpg" />
+    <meta name="twitter:image" content="https://kaerntnerhof-velden.com/img/kaerntnerhof_outside.jpg" />
 	
     <title>Hotel Kärntnerhof Velden | Hotel am Wörthersee in Kärnten</title>
     <!-- <link rel="icon" href="favicon.svg" /> -->
@@ -32,7 +32,7 @@
       "@type": "Hotel",
       "name": "Hotel Kärntnerhof Velden",
       "url": "https://kaerntnerhof-velden.com/",
-      "image": "https://kaerntnerhof-velden.com/img/kaerntnerhof_winter.jpg",
+      "image": "https://kaerntnerhof-velden.com/img/kaerntnerhof_outside.jpg",
       "telephone": "+43 676 9701077",
       "email": "office@kaerntnerhof-velden.com",
       "address": {
@@ -59,6 +59,8 @@
         .animate-fade-in-up   { animation: fadeInUp 0.9s ease-out both; }
         .delay-200            { animation-delay: 0.2s; }
     </style>
+
+</head>
 
 <body class="antialiased bg-gray-100 text-gray-900 flex flex-col min-h-screen justify-between">
 
@@ -138,8 +140,9 @@
         <section class="relative h-screen flex items-center justify-center overflow-hidden">
 
             <div class="absolute inset-0">
-            <img src="/img/kaerntnerhof_winter.jpg" alt="Hotel Kärntnerhof in Winter"
-                class="w-full h-full object-cover">
+            <img src="/img/kaerntnerhof_outside.jpg" alt="Hotel Kärntnerhof outside view"
+                loading="eager" fetchpriority="high" decoding="async"
+                class="w-full h-full object-cover" style="object-position: center 60%;">
 
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
             </div>
